@@ -1,0 +1,47 @@
+.App #page-body{
+    
+    width: 100%;
+    
+}
+
+.App .progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: white;
+  transform-origin: 0%;
+}
+
+
+
+.App .nav-item a{
+   font-size: 20px;
+}
+.App .navbar-brand {
+    font-size:35px ;
+}
+
+.App .padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+
+.App .hicontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom:40px ;
+    background-color: black;
+
+}
+.App .cv{
+    height:300px;
+
+}

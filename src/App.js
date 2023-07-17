@@ -8,6 +8,7 @@ import Navibar from './components/navbar';
 import HomePage from './pages/homepage';
 import Contact from './pages/contact';
 import Aboutme from './pages/aboutme';
+import Footer from './components/footer';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -25,6 +26,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/aboutibrahim" element={<Aboutme />} />
         </Routes>
+      </div>
+      <div id="footer">
+            <Footer />
       </div>
     </div>
   </BrowserRouter>

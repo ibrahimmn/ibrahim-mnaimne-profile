@@ -48,7 +48,9 @@
 .App .cv .cv-title{
     padding-bottom: 100px;
 }
-
+.App .link{
+  
+}
 
 .App .button-cv-pushable {
   position: relative;
@@ -101,6 +103,7 @@
   padding: 12px 27px;
   border-radius: 12px;
   font-size: 1.1rem;
+  
   color: white;
   background: hsl(0, 0%, 4%);
   will-change: transform;
@@ -116,6 +119,7 @@
   .App .button-cv-front {
     font-size: 2.25rem;
     padding: 12px 42px;
+   
   }
 }
 

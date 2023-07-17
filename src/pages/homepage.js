@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFile } from '@fortawesome/free-solid-svg-icons'
@@ -34,10 +35,10 @@ const HomePage = () => (
                 <button className="button-cv-pushable">
                 <span className="button-cv-shadow"></span>
                 <span className="button-cv-edge"></span>
-                <span className="button-cv-front text">
-                Download Ibrahim's CV
-                <FontAwesomeIcon icon={faFile} style={{color: "#ffffff",paddingLeft:"15px"}} />
-                </span>
+               
+               
+                <Link to="/Ibrahim+Mnaimne+Resume.pdf" style={{ textDecoration: 'none' }} target="_blank" download>  <span className="button-cv-front text">Download Ibrahim's CV<FontAwesomeIcon icon={faFile} style={{color: "#ffffff",paddingLeft:"15px"}} /> </span></Link>
+               
                 </button>
             </div>
         </Col>

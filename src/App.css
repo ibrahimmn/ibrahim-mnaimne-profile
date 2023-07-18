@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+.App{
+  font-family: 'Titillium web';
+}
+
 .App #page-body{
     
     width: 100%;
@@ -40,6 +45,11 @@
     padding-bottom:40px ;
     background-color: black;
 
+}
+.App .intro{
+  height: 400px;
+  background-color: black;
+ 
 }
 .App .cv{
     height:400px;
@@ -156,4 +166,9 @@
 
 .App .button-cv-pushable:focus:not(:focus-visible) {
   outline: none;
+}
+
+.App #footer{
+  padding: 0px;
+  width: 100%;
 }

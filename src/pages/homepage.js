@@ -16,7 +16,8 @@ const HomePage = () => (
            <div class="hicontainer">
             <div class="hi">
                 <h3>HI, I am</h3>
-                <h1>Ibrahim Mnaimne</h1>
+                <h1>Ibrahim Mnaimne</h1><br /><br /><br /><br />
+                <h4>A Web Developer</h4>
             </div>
             </div> 
         </Col>
@@ -27,9 +28,19 @@ const HomePage = () => (
 
       </Row>
       <Row>
+        <Col md={12} className='intro d-flex flex-column justify-content-center align-items-center text-center'>
+          <h1 style={{color:"white",paddingBottom:"20px"}}>
+                This is my profile website
+          </h1>
+          <h3 style={{color:"white",paddingTop:"20px"}}>
+            You can download my CV, check my professional background and contact me.
+          </h3>
+        </Col>
+      </Row>
+      <Row>
         <Col md={12} className='cv d-flex flex-column justify-content-center align-items-center '>
             <div className='cv-title'>
-                <h1>My CV:</h1>
+                <h1>My CV</h1>
             </div>
             <div>
                 <button className="button-cv-pushable">

@@ -1,31 +1,45 @@
-const Contact= () => (
-    <>
-    <h1>Hello, welcome to my blog!</h1>
-    <p>
-        Welcome to my blog! Proin congue
-        ligula id risus posuere, vel eleifend ex egestas. Sed in turpis leo. 
-        Aliquam malesuada in massa tincidunt egestas. Nam consectetur varius turpis, 
-        non porta arcu porttitor non. In tincidunt vulputate nulla quis egestas. Ut 
-        eleifend ut ipsum non fringilla. Praesent imperdiet nulla nec est luctus, at 
-        sodales purus euismod.
-    </p>
-    <p>
-        Donec vel mauris lectus. Etiam nec lectus urna. Sed sodales ultrices dapibus. 
-        Nam blandit tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan 
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec finibus lectus 
-        sed lorem ultricies, eget ornare leo luctus. Morbi vehicula, nulla eu tempor 
-        interdum, nibh elit congue tellus, ac vulputate urna lorem nec nisi. Morbi id 
-        consequat quam. Vivamus accumsan dui in facilisis aliquet.,
-    </p>
-    <p>
-        Etiam nec lectus urna. Sed sodales ultrices dapibus. 
-        Nam blandit tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan 
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec finibus lectus 
-        sed lorem ultricies, eget ornare leo luctus. Morbi vehicula, nulla eu tempor 
-        interdum, nibh elit congue tellus, ac vulputate urna lorem nec nisi. Morbi id 
-        consequat quam. Vivamus accumsan dui in facilisis aliquet.,
-    </p>
-    </>
-);
+import React, { useState } from "react";
+
+const Contact = () => {
+  const [status, setStatus] = useState("Submit");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    let result = await response.json();
+    alert(result.status);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" required />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label htmlFor="message">Message:</label>
+        <textarea id="message" required />
+      </div>
+      <button type="submit">{status}</button>
+    </form>
+  );
+};
 
 export default Contact;
+

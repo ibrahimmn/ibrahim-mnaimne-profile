@@ -13,7 +13,8 @@ const Footer=()=>{
                 <Row style={{ width:"100%"}}  className='d-flex '>
                     <Col md={4} style={{height:"200px"}} className='d-flex flex-column justify-content-center text-center '>
                         <h1>Ibrahim</h1>
-                        <p >I am an entry-level, computer engineer new graduate, experienced in fullstack development FE-heavy</p>
+                        <p >I am an entry-level, computer engineer new graduate, experienced in fullstack development FE-heavy</p><br></br>
+                        <Link style={{ color:"white"}} to="mailto:ibrahim.mneimneh3@gmail.com">ibrahim.mneimneh3@gmail.com</Link>
                     </Col>
                     <Col md={8} className='d-flex justify-content-center align-items-center'>
                         <Row style={{ width:"60%"}} className='text-center'> 

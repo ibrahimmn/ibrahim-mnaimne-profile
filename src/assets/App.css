@@ -197,3 +197,18 @@
   height: 55px;
   color: red;
 }
+
+/* animations */
+
+.App .hidden{
+    opacity: 0;
+    transition: all 1s; 
+}
+.App .show{
+  opacity: 1;
+}
+/* @media(prefers-reduced-motion){
+  .hidden{
+    transition: none;
+  }
+} */

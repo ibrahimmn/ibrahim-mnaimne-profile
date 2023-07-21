@@ -3,11 +3,34 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
-
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFile } from '@fortawesome/free-solid-svg-icons'
 
-const HomePage = () => (
+
+
+
+const HomePage = () => {
+
+  useEffect(()=>{
+       
+      const observer= new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            } 
+        });
+      });
+
+
+      const hiddenElements=document.querySelectorAll('.App .hidden');
+
+      hiddenElements.forEach((el)=>observer.observe(el)); 
+
+  },[])
+
+
+return (
     <>
     <Container fluid >
       <Row >
@@ -21,20 +44,22 @@ const HomePage = () => (
             </div>
             </div> 
         </Col>
-        <Col md={8} className='padding-0'>
+        <Col md={8} className=' padding-0'>
         <Image src="img/ibrahim.jpg"  fluid />
         
         </Col>
 
       </Row>
       <Row>
-        <Col md={12} className='intro d-flex flex-column justify-content-center align-items-center text-center'>
+        <Col md={12} className='intro d-flex flex-column justify-content-center align-items-center text-center '>
+          <div className='hidden'>
           <h1 style={{color:"white",paddingBottom:"20px"}}>
                 This is my profile website
           </h1>
           <h3 style={{color:"white",paddingTop:"20px"}}>
             You can download my CV, check my professional background and contact me.
           </h3>
+          </div>
         </Col>
       </Row>
       <Row>
@@ -42,7 +67,7 @@ const HomePage = () => (
             <div className='cv-title'>
                 <h1>My CV</h1>
             </div>
-            <div>
+            <div className='hidden'>
                 <button className="button-cv-pushable">
                 <span className="button-cv-shadow"></span>
                 <span className="button-cv-edge"></span>
@@ -56,6 +81,6 @@ const HomePage = () => (
       </Row>
     </Container>
     </>
-);
+)};
 
 export default HomePage;

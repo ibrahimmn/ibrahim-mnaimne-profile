@@ -1,30 +1,33 @@
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+
+
 const Aboutme = () => (
     <>
-    <h1>Hello, welcome to my blog!</h1>
-    <p>
-        Welcome to my blog! Proin congue
-        ligula id risus posuere, vel eleifend ex egestas. Sed in turpis leo. 
-        Aliquam malesuada in massa tincidunt egestas. Nam consectetur varius turpis, 
-        non porta arcu porttitor non. In tincidunt vulputate nulla quis egestas. Ut 
-        eleifend ut ipsum non fringilla. Praesent imperdiet nulla nec est luctus, at 
-        sodales purus euismod.
-    </p>
-    <p>
-        Donec vel mauris lectus. Etiam nec lectus urna. Sed sodales ultrices dapibus. 
-        Nam blandit tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan 
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec finibus lectus 
-        sed lorem ultricies, eget ornare leo luctus. Morbi vehicula, nulla eu tempor 
-        interdum, nibh elit congue tellus, ac vulputate urna lorem nec nisi. Morbi id 
-        consequat quam. Vivamus accumsan dui in facilisis aliquet.,
-    </p>
-    <p>
-        Etiam nec lectus urna. Sed sodales ultrices dapibus. 
-        Nam blandit tristique risus, eget accumsan nisl interdum eu. Aenean ac accumsan 
-        nisi. Nunc vel pulvinar diam. Nam eleifend egestas viverra. Donec finibus lectus 
-        sed lorem ultricies, eget ornare leo luctus. Morbi vehicula, nulla eu tempor 
-        interdum, nibh elit congue tellus, ac vulputate urna lorem nec nisi. Morbi id 
-        consequat quam. Vivamus accumsan dui in facilisis aliquet.,
-    </p>
+    <Container fluid>
+        <Row style={{height:"400px"}} className=' padding0'>
+            <Col md={12} style={{width:"100%",height:"400px",color:"white"}} className='d-flex flex-column justify-content-center align-items-center text-center   bg-black' >
+                <div>
+                <h1><strong>About Ibrahim Mnaimne</strong></h1>
+                </div>
+                <div className="scroll-down"></div>
+            </Col>
+        </Row>
+        
+    </Container>
+    <Container className='d-flex justify-content-center align-items-center flex-column' fluid><br></br>
+        <Row style={{width:"75%",height:"400px"}} className='d-flex flex-column text-start' >
+            <Col md={6}>
+                <h1><strong>Summary</strong></h1><br></br>
+            </Col>
+            <Col md={6}>
+                <h3>I am a lebanese new </h3>
+            </Col>
+        </Row>
+    </Container>
+    
     </>
 );
 

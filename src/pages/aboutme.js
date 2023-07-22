@@ -1,12 +1,51 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ListGroup,ListGroupItem } from 'react-bootstrap';
 import { Card,CardImg,CardGroup } from 'react-bootstrap';
+import {FaHtml5,FaCss3Alt,FaReact,FaNodeJs,FaBootstrap,FaLaravel,FaPhp } from 'react-icons/fa';
+import {BiLogoJavascript,BiLogoMongodb,BiLogoTailwindCss,BiLogoFirebase} from'react-icons/bi';
+import{GrMysql} from 'react-icons/gr';
+import {TbApi} from'react-icons/tb';
+import {SiAuth0} from 'react-icons/si';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
+import { icons } from 'react-icons/lib';
 
+ 
 
-const Aboutme = () => (
+const Aboutme = () => {
+
+  
+   useEffect(()=>{
+       
+        const observer= new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+              if(entry.isIntersecting){
+                  entry.target.classList.add('show');
+              } 
+          });
+        });
+        const cardobserver= new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+              if(entry.isIntersecting){
+                  entry.target.classList.add('cardshow');
+              } 
+          });
+        });
+    
+    
+        const hiddenElements=document.querySelectorAll(' .hidden');
+        const cardhiddenElements=document.querySelectorAll(' .cardhidden');
+    
+        hiddenElements.forEach((el)=>observer.observe(el));
+        cardhiddenElements.forEach((ell)=>cardobserver.observe(ell));
+    
+    },[]);
+
+  return(
     <> 
     <Container fluid>
         <Row   className=' padding0'>
@@ -20,7 +59,7 @@ const Aboutme = () => (
         
     </Container><br></br><br></br>
     <Container className='d-flex flex-column  ' fluid> 
-        <Row  className='d-flex  flex-column  justify-content-center align-items-center' >
+        <Row  className='d-flex  flex-column  justify-content-center align-items-center .hidden' >
             <Col md={6}>
                 <h1><strong>Summary</strong></h1><br></br>
             </Col>
@@ -32,7 +71,7 @@ const Aboutme = () => (
         </Row>
     </Container><br></br><br></br>
     <Container className='d-flex flex-column  ' fluid><br></br>
-        <Row   className='d-flex  flex-column  align-items-center' >
+        <Row   className='d-flex  flex-column  align-items-center hidden' >
             <Col md={6}>
                 <h1><strong>Education</strong></h1><br></br>
             </Col>
@@ -47,7 +86,7 @@ const Aboutme = () => (
         </Row>
     </Container><br></br>
     <Container className='d-flex flex-column  ' fluid><br></br>
-        <Row   className='d-flex  flex-column  align-items-center' >
+        <Row   className='d-flex  flex-column  align-items-center hidden' >
             <Col md={6}>
                 <h1><strong>Work experience</strong></h1><br></br>
             </Col>
@@ -103,56 +142,214 @@ const Aboutme = () => (
     <Container className='d-flex flex-column  ' fluid><br></br>
         <Row   className='d-flex  flex-column  align-items-center' >
             <Col md={6}>
-                <h1><strong>Work experience</strong></h1><br></br>
+                <h1><strong>Skills</strong></h1><br></br>
             </Col>
             <Col md={6}>
-            <Row xs={1} md={3} className="g-3">
-         <Col>
-          <Card>           
-            <Card.Body>
-              <Card.Title><b>Hubinit</b></Card.Title>
-              <Card.Text>
-              <em>UX/UI and Front end developer Intern</em>	
-              </Card.Text>
-              <Card.Text>
-              Nov 2022- Feb 2023	
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <Col>
-          <Card>           
-            <Card.Body>
-              <Card.Title><b>HediyeSepeti</b></Card.Title>
-              <Card.Text>
-              <em>HediyeSepeti</em>
-              </Card.Text>
-              <Card.Text>
-              Dec 2020- Feb 2021	
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <Col>
-          <Card>           
-            <Card.Body>
-              <Card.Title><b>Appen</b></Card.Title>
-              <Card.Text>
-              <em>Data collector</em>
-              </Card.Text>
-              <Card.Text>
-              Apr 2023- Present	
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-        
-    
-         </Row>
+
+            <h3 style={{ padding:"10px"}} ><b>Frontend</b></h3><br></br>
+            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">
+
+              <Col className='cardhidden'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaHtml5 className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>HTML5</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden one'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaCss3Alt className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>CSS3</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden two'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <BiLogoJavascript className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>JavaScript</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden three'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaReact className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>React</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaBootstrap className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>Bootstrap</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden one'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <BiLogoTailwindCss className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>TailwindCss</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+                 
+               
+                   
+         </Row><br></br>
+
+         <h3 style={{ padding:"10px"}} ><b>Backend</b></h3><br></br>
+            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">              
+                 
+                <Col className='cardhidden'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaNodeJs className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>NodeJs</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden one'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaLaravel className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>Laravel</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden two'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <FaPhp className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>Php</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden three'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <TbApi className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>REST APIs</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+                   
+         </Row><br></br>
+
+          <h3 style={{ padding:"10px"}} ><b>Database</b></h3><br></br>
+            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">              
+                                  
+                <Col className='cardhidden'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <BiLogoMongodb className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>Mongodb</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+
+                <Col className='cardhidden one'>
+                <Card>           
+                  <Card.Body className='text-center'>
+                    <Card.Title variant='top'>
+                      <GrMysql className='app-logo' />
+                    </Card.Title>
+                    <Card.Title><b>Mysql</b></Card.Title>                    
+                  </Card.Body>
+                </Card>
+                </Col>
+                    
+            </Row><br></br>
+
+            <h3 style={{ padding:"10px"}} ><b>Authentication</b></h3><br></br>
+              <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">              
+                                    
+                  <Col className='cardhidden'>
+                  <Card>           
+                    <Card.Body className='text-center'>
+                      <Card.Title variant='top'>
+                        <SiAuth0 className='app-logo' />
+                      </Card.Title>
+                      <Card.Title><b>Auth0</b></Card.Title>                    
+                    </Card.Body>
+                  </Card>
+                  </Col>
+
+                  <Col className='cardhidden one'>
+                  <Card>           
+                    <Card.Body className='text-center'>
+                      <Card.Title variant='top'>
+                        <BiLogoFirebase className='app-logo' />
+                      </Card.Title>
+                      <Card.Title><b>Firebase</b></Card.Title>                    
+                    </Card.Body>
+                  </Card>
+                  </Col>
+                      
+              </Row>
+
+
+
+
             </Col>
         </Row>
     </Container><br></br>
+
+    <Container>
+    <Row>
+        <Col md={12} className='cv d-flex flex-column justify-content-center align-items-center '>
+            <div className='cv-title'>
+                <h1>My CV</h1>
+            </div>
+            <div className='hidden'>
+                <button className="button-cv-pushable">
+                <span className="button-cv-shadow"></span>
+                <span className="button-cv-edge"></span>
+               
+               
+                <Link to="/Ibrahim+Mnaimne+Resume.pdf" style={{ textDecoration: 'none' }} target="_blank" download>  <span className="button-cv-front text">Download Ibrahim's CV<FontAwesomeIcon icon={faFile} style={{color: "#ffffff",paddingLeft:"15px"}} /> </span></Link>
+               
+                </button>
+            </div>
+        </Col>
+      </Row>
+    </Container>
+
     </>
-);
+)};
 
 export default Aboutme;

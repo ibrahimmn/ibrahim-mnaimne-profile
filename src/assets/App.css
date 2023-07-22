@@ -52,18 +52,18 @@
   background-color: black;
  
 }
-.App .cv{
+ .cv{
     height:400px;
 
 }
-.App .cv .cv-title{
+ .cv .cv-title{
     padding-bottom: 100px;
 }
 .App .link{
   
 }
 
-.App .button-cv-pushable {
+  .button-cv-pushable {
   position: relative;
   border: none;
   background: transparent;
@@ -76,7 +76,7 @@
   touch-action: manipulation;
 }
 
-.App .button-cv-shadow {
+  .button-cv-shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,7 +92,7 @@
     cubic-bezier(.3, .7, .4, 1);
 }
 
-.App .button-cv-edge {
+  .button-cv-edge {
   position: absolute;
   top: 0;
   left: 0;
@@ -108,7 +108,7 @@
   );
 }
 
-.App .button-cv-front {
+ .button-cv-front {
   display: block;
   position: relative;
   padding: 12px 27px;
@@ -127,19 +127,19 @@
 
 
 @media (min-width: 768px) {
-  .App .button-cv-front {
+   .button-cv-front {
     font-size: 2.25rem;
     padding: 12px 42px;
    
   }
 }
 
-.App .button-cv-pushable:hover {
+  .button-cv-pushable:hover {
   filter: brightness(110%);
   -webkit-filter: brightness(110%);
 }
 
-.App .button-cv-pushable:hover .button-cv-front {
+  .button-cv-pushable:hover .button-cv-front {
   transform: translateY(-6px);
   transition:
     transform
@@ -147,12 +147,12 @@
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.App .button-cv-pushable:active .button-cv-front {
+  .button-cv-pushable:active .button-cv-front {
   transform: translateY(-2px);
   transition: transform 34ms;
 }
 
-.App .button-cv-pushable:hover .button-cv-shadow {
+  .button-cv-pushable:hover .button-cv-shadow {
   transform: translateY(4px);
   transition:
     transform
@@ -160,12 +160,12 @@
     cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.App .button-cv-pushable:active .button-cv-shadow {
+  .button-cv-pushable:active .button-cv-shadow {
   transform: translateY(1px);
   transition: transform 34ms;
 }
 
-.App .button-cv-pushable:focus:not(:focus-visible) {
+ .button-cv-pushable:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -201,12 +201,14 @@
 
 /* animations */
 
-.App .hidden{
+  .hidden{
     opacity: 0;
-    transition: all 1s; 
+    transition: all 1.5s; 
+    filter: blur(5px);
 }
-.App .show{
+  .show{
   opacity: 1;
+  filter: blur(0px);
 }
 /* @media(prefers-reduced-motion){
   .hidden{

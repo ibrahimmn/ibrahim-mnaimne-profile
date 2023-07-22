@@ -4,8 +4,8 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFile } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -23,7 +23,7 @@ const HomePage = () => {
       });
 
 
-      const hiddenElements=document.querySelectorAll('.App .hidden');
+      const hiddenElements=document.querySelectorAll(' .hidden');
 
       hiddenElements.forEach((el)=>observer.observe(el)); 
 

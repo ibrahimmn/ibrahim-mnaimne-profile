@@ -85,7 +85,7 @@ const Aboutme = () => {
             </Col>
         </Row>
     </Container><br></br>
-    <Container className='d-flex flex-column  padding0' fluid><br></br>
+    {/* <Container className='d-flex flex-column  padding0' fluid><br></br>
         <Row   className='d-flex  flex-column  align-items-center hidden' >
             <Col md={6}>
                 <h1><strong>Work experience</strong></h1><br></br>
@@ -93,7 +93,7 @@ const Aboutme = () => {
             <Col md={6}>
             <Row xs={1} md={3} className="g-3">
          <Col>
-          <Card>           
+          <Card style={{height:"250px"}} className='d-flex flex-column align-items-center  '>           
             <Card.Body>
               <Card.Title><b>Hubinit</b></Card.Title>
               <Card.Text>
@@ -106,7 +106,7 @@ const Aboutme = () => {
           </Card>
           </Col>
           <Col>
-          <Card>           
+          <Card style={{height:"250px"}} >           
             <Card.Body>
               <Card.Title><b>HediyeSepeti</b></Card.Title>
               <Card.Text>
@@ -119,7 +119,7 @@ const Aboutme = () => {
           </Card>
           </Col>
           <Col>
-          <Card>           
+          <Card style={{height:"250px"}}>           
             <Card.Body>
               <Card.Title><b>Appen</b></Card.Title>
               <Card.Text>
@@ -136,21 +136,89 @@ const Aboutme = () => {
          </Row>
             </Col>
         </Row>
-    </Container><br></br>
+    </Container><br></br> */}
+    <br></br> 
+    <Container className='d-flex flex-column padding0  ' fluid> 
+        <Row   className='d-flex  flex-column  align-items-center hidden' >
+            <Col md={6}>
+                <h1><strong>Work experience</strong></h1> 
+            </Col>
+            <Col md={6}>
+              
+            </Col>
+        </Row>
+    </Container> 
+    
+    <Container className="d-flex flex-column align-items-center justify-content-center  hidden" fluid><br></br>
+         
 
+           
+            <Row style={{margin:"0" }} xs={1} md={3} className="d-flex align-items-center justify-content-center cardwidth g-5 hidden" >
+
+            <Col  >
+          <Card  style={{height:"155px"}} >           
+            <Card.Body>
+              <Card.Title><b>Hubinit</b></Card.Title>
+              <Card.Text>
+              <em>UX/UI and Front end developer Intern</em>	
+              </Card.Text>
+              <Card.Text>
+              Nov 2022- Feb 2023	
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          </Col>
+
+          <Col >
+          <Card  style={{height:"155px"}}  >           
+            <Card.Body>
+              <Card.Title><b>HediyeSepeti</b></Card.Title>
+              <Card.Text>
+              <em>PHP backend developer</em>
+              </Card.Text>
+              <Card.Text>
+              Dec 2020- Feb 2021	
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          </Col>
+          <Col  >
+          <Card  style={{height:"155px"}} >           
+            <Card.Body>
+              <Card.Title><b>Appen</b></Card.Title>
+              <Card.Text>
+              <em>Data collector</em>
+              </Card.Text>
+              <Card.Text>
+              Apr 2023- Present	
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          </Col>
+                  
+         </Row><br></br>
+  
+    </Container><br></br>
      
-    <Container className='d-flex flex-column ' fluid><br></br>
-        <Row   className='d-flex  flex-column  align-items-center' >
+   <br></br><br></br>
+    <Container className='d-flex flex-column padding0  ' fluid><br></br>
+        <Row   className='d-flex  flex-column  align-items-center hidden' >
             <Col md={6}>
                 <h1><strong>Skills</strong></h1><br></br>
             </Col>
             <Col md={6}>
+              
+            </Col>
+        </Row>
+    </Container><br></br>
+    <Container className="d-flex flex-column align-items-center justify-content-center  " fluid><br></br>
+         
 
-            <h3 style={{ padding:"10px"}} ><b>Frontend</b></h3><br></br>
-            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">
+            <h3 ><b>Frontend</b></h3><br></br>
+            <Row style={{margin:"0" }} xs={2} md={4} className="d-flex align-items-center justify-content-center cardwidth g-5 " >
 
-              <Col className='cardhidden'>
-                <Card>           
+              <Col  >
+                <Card   className='cardhidden '>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
                       <FaHtml5 className='app-logo' />
@@ -160,8 +228,8 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden one'>
-                <Card>           
+                <Col  >
+                <Card   className='cardhidden one '>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
                       <FaCss3Alt className='app-logo' />
@@ -171,8 +239,8 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden two'>
-                <Card>           
+                <Col  >
+                <Card  className='cardhidden two '>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
                       <BiLogoJavascript className='app-logo' />
@@ -182,8 +250,8 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden three'>
-                <Card>           
+                <Col  >
+                <Card   className='cardhidden three '>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
                       <FaReact className='app-logo' />
@@ -193,8 +261,8 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden four'>
-                <Card>           
+                <Col >
+                <Card  className='cardhidden four '>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
                       <FaBootstrap className='app-logo' />
@@ -204,25 +272,28 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden five'>
-                <Card>           
+                <Col   >
+                <Card   className='cardhidden five '>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
                       <BiLogoTailwindCss className='app-logo' />
                     </Card.Title>
-                    <Card.Title><b>TailwindCss</b></Card.Title>                    
+                    <Card.Title><b>Tailwind</b></Card.Title>                    
                   </Card.Body>
                 </Card>
                 </Col>
-                 
-               
-                   
+                  
          </Row><br></br>
+  
+    </Container><br></br>
+    <br></br>
+    <Container className="d-flex flex-column align-items-center justify-content-center  " fluid><br></br>
+         
 
-         <h3 style={{ padding:"10px"}} ><b>Backend</b></h3><br></br>
-            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5 ">              
-                 
-                <Col className='cardhidden'>
+            <h3 ><b>Backend</b></h3><br></br>
+            <Row style={{margin:"0" }} xs={2} md={4} className="d-flex align-items-center justify-content-center cardwidth g-5 " >
+
+            <Col className='cardhidden'>
                 <Card>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
@@ -265,13 +336,18 @@ const Aboutme = () => {
                   </Card.Body>
                 </Card>
                 </Col>
-                   
+                  
          </Row><br></br>
+  
+    </Container><br></br>
+    <br></br>
+    <Container className="d-flex flex-column align-items-center justify-content-center  " fluid><br></br>
+         
 
-          <h3 style={{ padding:"10px"}} ><b>Database</b></h3><br></br>
-            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">              
-                                  
-                <Col className='cardhidden'>
+            <h3 ><b>Database</b></h3><br></br>
+            <Row style={{margin:"0" }} xs={2} md={4} className="d-flex align-items-center justify-content-center cardwidth g-5 " >
+
+            <Col className='cardhidden'>
                 <Card>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
@@ -292,13 +368,18 @@ const Aboutme = () => {
                   </Card.Body>
                 </Card>
                 </Col>
-                    
-            </Row><br></br>
+                  
+         </Row><br></br>
+  
+    </Container><br></br>
+    <br></br>
+    <Container className="d-flex flex-column align-items-center justify-content-center  " fluid><br></br>
+         
 
-            <h3 style={{ padding:"10px"}} ><b>Authentication</b></h3><br></br>
-              <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">              
-                                    
-                  <Col className='cardhidden'>
+            <h3 ><b>Authentication</b></h3><br></br>
+            <Row style={{margin:"0" }} xs={2} md={4} className="d-flex align-items-center justify-content-center cardwidth g-5 " >
+
+            <Col className='cardhidden'>
                   <Card>           
                     <Card.Body className='text-center'>
                       <Card.Title variant='top'>
@@ -319,15 +400,12 @@ const Aboutme = () => {
                     </Card.Body>
                   </Card>
                   </Col>
-                      
-              </Row>
-
-
-
-
-            </Col>
-        </Row>
+                  
+         </Row><br></br>
+  
     </Container><br></br>
+
+
 
     <Container fluid>
     <Row>

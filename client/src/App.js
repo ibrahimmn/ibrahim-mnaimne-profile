@@ -11,7 +11,8 @@ import HomePage from './pages/homepage';
 import Contact from './pages/contact';
 import Aboutme from './pages/aboutme';
 import Footer from './components/footer';
-import ApiTest from './pages/api-test';
+import NotFound from './pages/error404';
+ 
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -29,7 +30,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/aboutibrahim" element={<Aboutme />} />
-          <Route path="/apitest" element={<ApiTest />}/>
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
       

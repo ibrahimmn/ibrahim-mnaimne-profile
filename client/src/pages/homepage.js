@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +12,7 @@ import { faFile } from '@fortawesome/free-solid-svg-icons';
 
 
 const HomePage = () => {
-
+ const navigate=useNavigate();
   useEffect(()=>{
        
       const observer= new IntersectionObserver((entries)=>{
@@ -58,7 +59,20 @@ return (
           </h1>
           <h3 style={{color:"white",paddingTop:"20px"}}>
             You can download my CV, check my professional background and contact me.
-          </h3>
+          </h3><br></br><br></br>
+          <Row className=' d-flex justify-content-center align-items-center  '>
+            <Col md={6}>
+            <button className="button-81 " onClick={() => navigate("/contact")}>
+            About me 
+            </button>
+            </Col>
+            <Col className='top' md={6}>
+            <button className="button-81 " onClick={() => navigate("/contact")}>
+            Contact me 
+            </button>
+            </Col>
+          </Row>
+           
           </div>
         </Col>
       </Row>

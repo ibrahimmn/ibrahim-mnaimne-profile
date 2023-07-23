@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ListGroup,ListGroupItem } from 'react-bootstrap';
-import { Card,CardImg,CardGroup } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import {FaHtml5,FaCss3Alt,FaReact,FaNodeJs,FaBootstrap,FaLaravel,FaPhp } from 'react-icons/fa';
 import {BiLogoJavascript,BiLogoMongodb,BiLogoTailwindCss,BiLogoFirebase} from'react-icons/bi';
 import{GrMysql} from 'react-icons/gr';
@@ -12,7 +12,7 @@ import {TbApi} from'react-icons/tb';
 import {SiAuth0} from 'react-icons/si';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
-import { icons } from 'react-icons/lib';
+ 
 
  
 
@@ -58,7 +58,7 @@ const Aboutme = () => {
         </Row>
         
     </Container><br></br><br></br>
-    <Container className='d-flex flex-column  ' fluid> 
+    <Container className='d-flex flex-column  padding0 ' fluid> 
         <Row  className='d-flex  flex-column  justify-content-center align-items-center .hidden' >
             <Col md={6}>
                 <h1><strong>Summary</strong></h1><br></br>
@@ -70,7 +70,7 @@ const Aboutme = () => {
             </Col>
         </Row>
     </Container><br></br><br></br>
-    <Container className='d-flex flex-column  ' fluid><br></br>
+    <Container className='d-flex flex-column padding0  ' fluid><br></br>
         <Row   className='d-flex  flex-column  align-items-center hidden' >
             <Col md={6}>
                 <h1><strong>Education</strong></h1><br></br>
@@ -85,7 +85,7 @@ const Aboutme = () => {
             </Col>
         </Row>
     </Container><br></br>
-    <Container className='d-flex flex-column  ' fluid><br></br>
+    <Container className='d-flex flex-column  padding0' fluid><br></br>
         <Row   className='d-flex  flex-column  align-items-center hidden' >
             <Col md={6}>
                 <h1><strong>Work experience</strong></h1><br></br>
@@ -139,7 +139,7 @@ const Aboutme = () => {
     </Container><br></br>
 
      
-    <Container className='d-flex flex-column  ' fluid><br></br>
+    <Container className='d-flex flex-column padding0 ' fluid><br></br>
         <Row   className='d-flex  flex-column  align-items-center' >
             <Col md={6}>
                 <h1><strong>Skills</strong></h1><br></br>
@@ -193,7 +193,7 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden'>
+                <Col className='cardhidden four'>
                 <Card>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
@@ -204,7 +204,7 @@ const Aboutme = () => {
                 </Card>
                 </Col>
 
-                <Col className='cardhidden one'>
+                <Col className='cardhidden five'>
                 <Card>           
                   <Card.Body className='text-center'>
                     <Card.Title variant='top'>
@@ -220,7 +220,7 @@ const Aboutme = () => {
          </Row><br></br>
 
          <h3 style={{ padding:"10px"}} ><b>Backend</b></h3><br></br>
-            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5">              
+            <Row style={{ paddingLeft:"25px"}}  xs={2} md={4} className="d-flex justify-content-center g-5 ">              
                  
                 <Col className='cardhidden'>
                 <Card>           
@@ -329,7 +329,7 @@ const Aboutme = () => {
         </Row>
     </Container><br></br>
 
-    <Container>
+    <Container fluid>
     <Row>
         <Col md={12} className='cv d-flex flex-column justify-content-center align-items-center '>
             <div className='cv-title'>

@@ -68,3 +68,9 @@
   .three{
     transition-delay:600ms ;
   }
+  .four{
+    transition-delay:800ms ;
+  }
+  .five{
+    transition-delay:1000ms ;
+  }

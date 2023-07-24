@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://nodejs-mail-9b50f1e514ee.herokuapp.com",
+  "proxy": "https://nodejs-test-d2uo.onrender.com",
   "eslintConfig": {
     "extends": [
       "react-app",
